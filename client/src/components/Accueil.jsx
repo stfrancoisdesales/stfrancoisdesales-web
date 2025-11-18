@@ -1,5 +1,6 @@
 import { Box, AppBar, Toolbar, Typography, Button, Link, Container, Grid, Paper, IconButton } from "@mui/material";
 import { List } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 const Accueil = ({isDark, heroImageURL}) => {
     
@@ -15,7 +16,13 @@ const Accueil = ({isDark, heroImageURL}) => {
         { key: 4, label: "Archives", link: "/archives" },
         { key: 5, label: "Cimetière", link: "/cimetiere" },
         { key: 6, label: "Contact", link: "/contact" }
-      ];
+    ];
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate("/a-propos");
+    }
 
     return (
         <Box
@@ -26,7 +33,7 @@ const Accueil = ({isDark, heroImageURL}) => {
                 color: "primary",
                 transition: "background-color 0.3s ease, color 0.3s ease"
             }}
-            >
+        >
             
             {/* Hero Section */}
             <Box
@@ -38,17 +45,16 @@ const Accueil = ({isDark, heroImageURL}) => {
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     color: "white",
-                    // mt: 8,
                     py: { xs: 8, md: 12 },
                     textAlign: "center",
                     width: "100%"
                 }}
             >
-            <Container maxWidth="md">
-                <Typography variant="h3" sx={{ fontWeight: 700, mb: 2 }}>
-                    Bienvenue à la Paroisse Saint François de Sales
-                </Typography>
-            </Container>
+                <Container maxWidth="md">
+                    <Typography variant="h3" sx={{ fontWeight: 700, mb: 2 }}>
+                        Bienvenue à la Paroisse Saint François de Sales
+                    </Typography>
+                </Container>
             </Box>
 
             {/* About Section */}
@@ -69,30 +75,30 @@ const Accueil = ({isDark, heroImageURL}) => {
                                 pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
                                 qui officia deserunt mollit anim id est laborum.
                             </Typography>
-                            <Button variant="contained" sx={{ borderRadius: 2 }}>
+                            <Button variant="contained" sx={{ borderRadius: 2 }} onClick={handleClick}>
                                 En savoir plus
                             </Button>
                         </Box>
 
                         {/* Semainier */}
-                        <Box item>
+                        {/* <Box item>
                             <Typography variant="h4" sx={{ fontWeight: 700 }}>
                                 Semainier
                             </Typography>
                             <Typography>
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit, sed do 
-                            eiusmod tempor incididunt ut labore 
-                            et dolore magna aliqua. Ut enim ad minim veniam, 
-                            quis nostrud exercitation ullamco laboris 
-                            nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in 
-                            voluptate velit esse cillum dolore eu fugiat 
-                            nulla pariatur. Excepteur sint occaecat cupidatat 
-                            non proident, sunt in culpa qui officia deserunt 
-                            mollit anim id est laborum.
+                                Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit, sed do 
+                                eiusmod tempor incididunt ut labore 
+                                et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation ullamco laboris 
+                                nisi ut aliquip ex ea commodo consequat. 
+                                Duis aute irure dolor in reprehenderit in 
+                                voluptate velit esse cillum dolore eu fugiat 
+                                nulla pariatur. Excepteur sint occaecat cupidatat 
+                                non proident, sunt in culpa qui officia deserunt 
+                                mollit anim id est laborum.
                             </Typography>
-                        </Box>
+                        </Box> */}
                     </Grid>
                 </Grid>
             </Container>
