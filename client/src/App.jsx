@@ -29,6 +29,7 @@ import Accueil from "./components/Accueil";
 import Cimetiere from "./components/Cimetiere";
 import Annonces from "./components/Annonces";
 import Apropos from "./components/Apropos";
+import Archives from "./components/Archives";
 
 const App = () => {
   const theme = useTheme();
@@ -53,7 +54,7 @@ const App = () => {
       label: "Semainier",
       link: "https://www.semainierparoissial.com/semainiers/193.pdf"
     },
-    // { key: 4, label: "Archives", link: "/archives" },
+    { key: 4, label: "Archives", link: "/archives" },
     { key: 5, label: "Cimetière", link: "/cimetiere" }
   ];
 
@@ -121,7 +122,7 @@ const App = () => {
             }}
           >
             <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
-              Paroisse St François de Sales
+              Paroisse Saint François de Sales
             </Typography>
 
             {/* === Conditional Rendering === */}
@@ -164,14 +165,23 @@ const App = () => {
           {drawer}
         </Drawer>
 
-        {/* Page Content */}
-        <Routes>
-          <Route path="/" element={<Accueil isdark={isDark} heroImageURL={heroImageURL} />} />
-          <Route path="/accueil" element={<Accueil isdark={isDark} heroImageURL={heroImageURL} />} />
-          <Route path="/cimetiere" element={<Cimetiere isdark={isDark} cemeteryImage={cemeteryImage}/>} />
-          <Route path="/a-propos" element={<Apropos isDark={isDark} churchImageURL={churchImageURL} priestImageURL={priestImageURL}/>} />
-          {/* <Route path="/annonces" element={ <Annonces /> } /> */}
-        </Routes>
+        <Box
+            sx={{
+                width: "100%",
+                fontFamily: "sans-serif",
+                bgcolor: isDark ? "background.default" : "#f9fafb",
+                color: "primary",
+                transition: "background-color 0.3s ease, color 0.3s ease"
+            }}
+        >
+          <Routes>
+            <Route path="/" element={<Accueil isdark={isDark} heroImageURL={heroImageURL} />} />
+            <Route path="/accueil" element={<Accueil isdark={isDark} heroImageURL={heroImageURL} />} />
+            <Route path="/cimetiere" element={<Cimetiere isdark={isDark} cemeteryImage={cemeteryImage}/>} />
+            <Route path="/a-propos" element={<Apropos isDark={isDark} churchImageURL={churchImageURL} priestImageURL={priestImageURL}/>} />
+            <Route path="/archives" element={<Archives churchImageURL={churchImageURL}/>} />
+          </Routes>
+        </Box>
       </Box>
     </Router>
   );
