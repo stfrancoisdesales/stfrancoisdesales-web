@@ -36,7 +36,7 @@ const Cimetiere = ({ isDark, cemeteryImage }) => {
                 <Grid container spacing={6} alignItems="center">
                     <Box item xs={12} md={6}>
                         <Typography variant="h4" sx={{ fontWeight: 700, mb: 1 }}>
-                            Titre
+                            Cimetière
                         </Typography>
                         <Typography sx={{ mb: 2 }}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
