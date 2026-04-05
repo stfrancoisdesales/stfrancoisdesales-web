@@ -4,8 +4,6 @@ import ChurchHomePage from './components/ChurchHomePage';
 import Biographie from './components/Biographie';
 import Histoire from './components/Histoire';
 import Gallery from './components/Gallery';
-// import Apropos from './components/Apropos';
-// import Archives from './components/Archives';
 
 const App = () => {
 
