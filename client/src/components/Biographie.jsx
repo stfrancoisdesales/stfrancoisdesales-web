@@ -140,7 +140,9 @@ const Biographie = ({ navLinks }) => {
               alt="Saint François de Sales" 
               style={{
                 float: 'left',
-                width: '280px',
+                width: '100%',
+                maxWidth: '280px',
+                height: 'auto',
                 margin: '0 2rem 1rem 0',
                 borderRadius: '4px',
                 boxShadow: '0 8px 24px rgba(80,40,10,0.15)',
