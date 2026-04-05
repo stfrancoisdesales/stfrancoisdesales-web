@@ -274,7 +274,7 @@ const ChurchHomePage = ({ navLinks }) => {
               <ContactRow label="Téléphone">450 666-3563</ContactRow>
               <ContactRow label="Télécopieur">450 666-2761</ContactRow>
               <ContactRow label="Courriel">
-                <a href="mailto:stfrancoisdesales@videotron.ca" style={{ color: '#a07030', textDecoration: 'none' }}>
+                <a href="mailto:stfrancoisdesales@videotron.ca" style={{ color: '#a07030', textDecoration: 'none', fontSize: '0.88rem' }}>
                   stfrancoisdesales@videotron.ca
                 </a>
               </ContactRow>
@@ -326,6 +326,7 @@ const ChurchHomePage = ({ navLinks }) => {
             position: 'absolute', inset: 0, opacity: 0.06,
             backgroundImage: 'repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)',
             backgroundSize: '12px 12px',
+            pointerEvents: 'none',
           }} />
           <p style={{ color: '#c8a04a', fontSize: '0.75rem', letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: '1.2rem' }}>
             À consulter chaque semaine
@@ -336,7 +337,10 @@ const ChurchHomePage = ({ navLinks }) => {
           <p style={{ color: 'rgba(212,168,80,0.75)', fontSize: '1rem', marginBottom: '2.5rem', lineHeight: 1.8 }}>
             Restez informés de la vie de notre église<br />et consultez les dernières annonces.
           </p>
-          <a href="#" style={{
+          <a href="https://semainierparoissial.com/semainiers/193.pdf" 
+            target='_blank' 
+            rel='noopener noreferrer' 
+            style={{
             display: 'inline-block',
             padding: '0.85rem 2.5rem',
             background: 'transparent',
