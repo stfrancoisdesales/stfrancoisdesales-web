@@ -102,6 +102,15 @@ const Biographie = ({ navLinks }) => {
           <div style={{ width: '1px', height: '48px', background: 'linear-gradient(to bottom, rgba(200,160,74,0.6), transparent)' }} />
           <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#c8a04a' }} />
         </div>
+
+        {/* Image credit */}
+        <div style={{
+          position: 'absolute', bottom: '1rem', right: '1rem',
+          fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.4)',
+          letterSpacing: '0.05em', animation: 'fadeIn 1s ease 1.3s both'
+        }}>
+          Photo : TourismeLaval.com
+        </div>
       </header>
 
       <main style={{ maxWidth: '1080px', margin: '0 auto', padding: '4rem 1.5rem' }}>
