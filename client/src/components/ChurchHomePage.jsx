@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import NavBar from './NavBar';
+import churchFront from '../../assets/church-front.jpg';
 
 const ChurchHomePage = ({ navLinks }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -63,28 +64,20 @@ const ChurchHomePage = ({ navLinks }) => {
 
   return (
     <div style={{ minHeight: '100vh', background: '#faf8f5', fontFamily: "'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif", color: '#2c2420', overflowX: 'hidden' }}>
-      
-      <NavBar navLinks={navLinks} scrolled={scrolled}/>
-      
+
+      <NavBar navLinks={navLinks} scrolled={scrolled} />
+
       {/* Hero */}
       <header style={{
         position: 'relative', minHeight: '100vh',
-        background: 'linear-gradient(160deg, #1a0e08 0%, #2e1a0e 40%, #4a2e18 70%, #3a2012 100%)',
+        backgroundImage: `linear-gradient(160deg, rgba(26,14,8,0.85) 0%, rgba(46,26,14,0.7) 40%, rgba(74,46,24,0.8) 70%, rgba(58,32,18,0.9) 100%), url(${churchFront})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
         textAlign: 'center', padding: '6rem 2rem 4rem',
         overflow: 'hidden',
       }}>
-        {/* Decorative cross pattern */}
-        <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.04 }} viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <pattern id="cross" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-              <rect x="35" y="10" width="10" height="60" fill="white" />
-              <rect x="15" y="28" width="50" height="10" fill="white" />
-            </pattern>
-          </defs>
-          <rect width="800" height="800" fill="url(#cross)" />
-        </svg>
-
         {/* Radial glow */}
         <div style={{
           position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)',
@@ -176,7 +169,7 @@ const ChurchHomePage = ({ navLinks }) => {
             overflow: 'hidden',
           }}>
             {/* Corner ornaments */}
-            {['topleft','topright','bottomleft','bottomright'].map((pos) => (
+            {['topleft', 'topright', 'bottomleft', 'bottomright'].map((pos) => (
               <span key={pos} style={{
                 position: 'absolute',
                 fontSize: '1.2rem', color: '#c8a04a', opacity: 0.5,
@@ -192,15 +185,56 @@ const ChurchHomePage = ({ navLinks }) => {
             <p style={{ textAlign: 'center', color: '#a07840', fontSize: '0.85rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '2rem' }}>
               Annonces paroissiales
             </p>
-            <div style={{
-              border: '1px dashed rgba(160,120,64,0.3)', borderRadius: '2px',
-              padding: '2.5rem', textAlign: 'center', background: 'rgba(255,255,255,0.5)',
+            <div className="announcement-container" style={{
+              textAlign: 'left',
+              border: '1px solid rgba(160,120,64,0.15)',
+              borderRadius: '4px',
+              padding: '2.5rem',
+              background: '#fff',
+              boxShadow: '0 4px 20px rgba(80,40,10,0.04)',
+              position: 'relative',
             }}>
-              <p style={{ color: '#a08060', fontStyle: 'italic', lineHeight: 1.9 }}>
-                Espace réservé pour vos annonces :<br />
-                Guignolée, aide alimentaire, Coup de pouce,<br />
-                célébrations de Noël, de Pâques…
-              </p>
+              {/* Add image to go with the announcement on the left src/assets/images/concert.jpg */}
+              <img src="assets/pub/publicité.png" alt="Concert" className="announcement-image" />
+              <div className="announcement-content">
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#3a2010', marginBottom: '0.8rem', lineHeight: 1.4, textAlign: 'center' }}>
+                  Concert de l'Harmonie à vent des finissants du Collège Laval
+                </h3>
+                <p style={{ color: '#6b4020', fontSize: '0.95rem', marginBottom: '1.5rem', fontStyle: 'italic', textAlign: 'center' }}>
+                  Sous la direction de Mme Vanessa Coderre
+                </p>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', marginBottom: '1.8rem', fontSize: '1rem', color: '#4a3520', alignItems: 'center' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <strong style={{ color: '#a07030' }}>Quand :</strong>
+                    <span>Vendredi le 24 avril 2026 à 19 h 30</span>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <strong style={{ color: '#a07030' }}>Où :</strong>
+                    <span>Église Saint-François-de-Sales</span>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <strong style={{ color: '#a07030' }}>Prix :</strong>
+                    <span style={{ textDecoration: 'underline' }}>Contribution volontaire</span>
+                  </div>
+                </div>
+
+                <p style={{ color: '#a07840', fontSize: '1.05rem', fontWeight: 600, textAlign: 'center', marginBottom: '1.8rem' }}>
+                  Nous vous attendons en grand nombre !
+                </p>
+
+                <div style={{
+                  background: 'rgba(200,160,74,0.06)',
+                  padding: '1.2rem',
+                  borderRadius: '4px',
+                  borderLeft: '4px solid #c8a04a',
+                  fontSize: '0.9rem',
+                  lineHeight: 1.6,
+                  color: '#5a3d24'
+                }}>
+                  <strong>N.B.</strong> Les contributions seront partagées entre le comité social de la paroisse et la Fondation du Collège Laval qui fournit des bourses d'études pour des élèves.
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -337,22 +371,22 @@ const ChurchHomePage = ({ navLinks }) => {
           <p style={{ color: 'rgba(212,168,80,0.75)', fontSize: '1rem', marginBottom: '2.5rem', lineHeight: 1.8 }}>
             Restez informés de la vie de notre église<br />et consultez les dernières annonces.
           </p>
-          <a href="https://semainierparoissial.com/semainiers/193.pdf" 
-            target='_blank' 
-            rel='noopener noreferrer' 
+          <a href="https://semainierparoissial.com/semainiers/193.pdf"
+            target='_blank'
+            rel='noopener noreferrer'
             style={{
-            display: 'inline-block',
-            padding: '0.85rem 2.5rem',
-            background: 'transparent',
-            border: '1px solid rgba(200,160,74,0.6)',
-            color: '#c8a04a',
-            textDecoration: 'none',
-            fontSize: '0.85rem',
-            letterSpacing: '0.2em',
-            textTransform: 'uppercase',
-            transition: 'all 0.3s ease',
-            fontFamily: "'Palatino Linotype', serif",
-          }}
+              display: 'inline-block',
+              padding: '0.85rem 2.5rem',
+              background: 'transparent',
+              border: '1px solid rgba(200,160,74,0.6)',
+              color: '#c8a04a',
+              textDecoration: 'none',
+              fontSize: '0.85rem',
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              transition: 'all 0.3s ease',
+              fontFamily: "'Palatino Linotype', serif",
+            }}
             onMouseEnter={(e) => { e.target.style.background = 'rgba(200,160,74,0.12)'; e.target.style.borderColor = '#c8a04a'; }}
             onMouseLeave={(e) => { e.target.style.background = 'transparent'; e.target.style.borderColor = 'rgba(200,160,74,0.6)'; }}
           >
@@ -390,6 +424,37 @@ const ChurchHomePage = ({ navLinks }) => {
         @keyframes bounce {
           0%, 100% { transform: translateX(-50%) translateY(0); }
           50% { transform: translateX(-50%) translateY(8px); }
+        }
+        .announcement-container {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          align-items: center;
+        }
+        .announcement-image {
+          width: 100%;
+          max-width: 400px;
+          border-radius: 4px;
+          object-fit: cover;
+        }
+        .announcement-content {
+          flex: 1;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        @media (min-width: 768px) {
+          .announcement-container {
+            flex-direction: row;
+            align-items: stretch;
+            gap: 2.5rem;
+          }
+          .announcement-image {
+            flex: 0 0 35%;
+            max-width: 35%;
+            height: auto;
+          }
         }
       `}</style>
     </div>

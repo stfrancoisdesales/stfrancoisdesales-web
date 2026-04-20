@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import NavBar from './NavBar';
+import churchFront from '../../assets/church-front.jpg';
 
 import img1 from '../../assets/vie-chretienne/image1.jpeg';
 import img2 from '../../assets/vie-chretienne/image2.jpeg';
@@ -73,22 +74,14 @@ const Gallery = ({ navLinks }) => {
       {/* Hero */}
       <header style={{
         position: 'relative', minHeight: '60vh',
-        background: 'linear-gradient(160deg, #1a0e08 0%, #2e1a0e 40%, #4a2e18 70%, #3a2012 100%)',
+        backgroundImage: `linear-gradient(160deg, rgba(26,14,8,0.85) 0%, rgba(46,26,14,0.7) 40%, rgba(74,46,24,0.8) 70%, rgba(58,32,18,0.9) 100%), url(${churchFront})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
         textAlign: 'center', padding: '6rem 2rem 4rem',
         overflow: 'hidden',
       }}>
-        {/* Decorative cross pattern */}
-        <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.04 }} viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <pattern id="cross" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-              <rect x="35" y="10" width="10" height="60" fill="white" />
-              <rect x="15" y="28" width="50" height="10" fill="white" />
-            </pattern>
-          </defs>
-          <rect width="800" height="800" fill="url(#cross)" />
-        </svg>
-
         {/* Radial glow */}
         <div style={{
           position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)',

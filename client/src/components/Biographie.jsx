@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import NavBar from './NavBar';
 import saintFrancoisImg from '../../assets/saint-francois-de-sales.jpeg';
+import churchFront from '../../assets/church-front.jpg';
 
 const Biographie = ({ navLinks }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -39,35 +40,29 @@ const Biographie = ({ navLinks }) => {
 
   const citations = [
     "Il faut soigner le corps pour que l’âme s’y plaise.",
-    "Le bruit fait peu de bien, le bien fait peu de bruit.",
     "Une grande misère parmi les hommes, c’est qu’ils savent si bien ce qui leur est dû et qu’ils sentent si peu ce qu’ils doivent aux autres.",
-    "Il faut tout faire par amour, rien par la force."
+    "On a besoin de patience avec tout le monde, mais particulièrement avec soi-même",
+    "Le bruit fait peu de bien, le bien fait peu de bruit.",
+    "Il faut tout faire par amour, rien par la force.",
+    "Une demi-heure de méditation est essentielle sauf quand on est très occupé. Alors une heure est nécessaire."
   ];
 
   return (
     <div style={{ minHeight: '100vh', background: '#faf8f5', fontFamily: "'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif", color: '#2c2420', overflowX: 'hidden' }}>
-      
-      <NavBar navLinks={navLinks} scrolled={scrolled}/>
+
+      <NavBar navLinks={navLinks} scrolled={scrolled} />
 
       {/* Hero */}
       <header style={{
         position: 'relative', minHeight: '60vh',
-        background: 'linear-gradient(160deg, #1a0e08 0%, #2e1a0e 40%, #4a2e18 70%, #3a2012 100%)',
+        backgroundImage: `linear-gradient(160deg, rgba(26,14,8,0.85) 0%, rgba(46,26,14,0.7) 40%, rgba(74,46,24,0.8) 70%, rgba(58,32,18,0.9) 100%), url(${churchFront})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
         textAlign: 'center', padding: '6rem 2rem 4rem',
         overflow: 'hidden',
       }}>
-        {/* Decorative cross pattern */}
-        <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.04 }} viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <pattern id="cross" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-              <rect x="35" y="10" width="10" height="60" fill="white" />
-              <rect x="15" y="28" width="50" height="10" fill="white" />
-            </pattern>
-          </defs>
-          <rect width="800" height="800" fill="url(#cross)" />
-        </svg>
-
         {/* Radial glow */}
         <div style={{
           position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)',
@@ -119,7 +114,7 @@ const Biographie = ({ navLinks }) => {
         >
           <div style={{ width: '48px', height: '2px', background: '#c8a04a', margin: '0 auto 2rem' }} />
           <p style={{ maxWidth: '800px', margin: '0 auto 1.2rem', fontSize: '1.15rem', lineHeight: 1.9, color: '#4a3520' }}>
-            Découvrez la vie, le parcours et l'héritage<br/>
+            Découvrez la vie, le parcours et l'héritage<br />
             de Saint François de Sales (1567-1622)
           </p>
         </section>
@@ -133,11 +128,11 @@ const Biographie = ({ navLinks }) => {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, color: '#3a2010', marginBottom: '2rem', letterSpacing: '0.02em', borderBottom: '1px solid rgba(160,120,64,0.2)', paddingBottom: '1rem', textAlign: 'center' }}>
             Sa Vie et Son Parcours
           </h2>
-          
+
           <div style={{ fontSize: '1.1rem', lineHeight: 1.9, color: '#4a3520', textAlign: 'justify' }}>
-            <img 
-              src={saintFrancoisImg} 
-              alt="Saint François de Sales" 
+            <img
+              src={saintFrancoisImg}
+              alt="Saint François de Sales"
               style={{
                 float: 'left',
                 width: '100%',
@@ -147,7 +142,7 @@ const Biographie = ({ navLinks }) => {
                 borderRadius: '4px',
                 boxShadow: '0 8px 24px rgba(80,40,10,0.15)',
                 border: '1px solid rgba(160,120,64,0.2)'
-              }} 
+              }}
             />
             <p style={{ marginBottom: '1.5rem' }}>
               Il est né à Thorens, en 1567. Il fait ses études à La Roche-sur-Foron, Annecy, Paris, puis enfin Padoue où il est reçu Docteur en droit civil et canonique. Il abandonne alors la carrière juridique à laquelle le destine son père pour devenir prêtre en 1593.
@@ -174,7 +169,7 @@ const Biographie = ({ navLinks }) => {
           style={{ marginBottom: '2rem', padding: '1rem', background: 'transparent' }}
         >
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-             <h2 style={{ fontSize: '1.8rem', fontWeight: 700, color: '#3a2010', marginBottom: '1rem', letterSpacing: '0.02em' }}>
+            <h2 style={{ fontSize: '1.8rem', fontWeight: 700, color: '#3a2010', marginBottom: '1rem', letterSpacing: '0.02em' }}>
               Quelques citations célèbres
             </h2>
             <div style={{ width: '60px', height: '2px', background: 'linear-gradient(90deg, transparent, #c8a04a, transparent)', margin: '0 auto' }} />
@@ -183,7 +178,7 @@ const Biographie = ({ navLinks }) => {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
             {citations.map((citation, index) => (
               <div key={index} style={{
-                background: '#fff', border: '1px solid rgba(160,120,64,0.15)', borderRadius: '2px', padding: '2rem', 
+                background: '#fff', border: '1px solid rgba(160,120,64,0.15)', borderRadius: '2px', padding: '2rem',
                 boxShadow: '0 4px 12px rgba(80,40,10,0.03)', position: 'relative'
               }}>
                 <span style={{ position: 'absolute', top: '10px', left: '15px', fontSize: '3rem', color: 'rgba(200,160,74,0.2)', fontFamily: 'Georgia, serif', lineHeight: 1 }}>
