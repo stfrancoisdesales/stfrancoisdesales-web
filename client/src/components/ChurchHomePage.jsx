@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import NavBar from './NavBar';
 import churchFront from '../../assets/church-front.jpg';
+import publicite from '../../assets/pub/publicité.png';
 
 const ChurchHomePage = ({ navLinks }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -204,7 +205,7 @@ const ChurchHomePage = ({ navLinks }) => {
               position: 'relative',
             }}>
               {/* Add image to go with the announcement on the left src/assets/images/concert.jpg */}
-              <img src="/assets/pub/publicité.png" alt="Concert" className="announcement-image" />
+              <img src={publicite} alt="Concert" className="announcement-image" />
               <div className="announcement-content">
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#3a2010', marginBottom: '0.8rem', lineHeight: 1.4, textAlign: 'center' }}>
                   Concert de l'Harmonie à vent des finissants du Collège Laval
