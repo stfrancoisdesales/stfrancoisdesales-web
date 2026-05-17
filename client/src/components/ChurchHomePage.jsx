@@ -114,7 +114,7 @@ const ChurchHomePage = ({ navLinks }) => {
           « Seigneur, ta Parole est la lumière de mes pas,<br />la lampe de ma route. »
         </p>
         <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.4)', marginTop: '0.5rem', letterSpacing: '0.15em', animation: 'fadeIn 1s ease 1.3s both' }}>
-          PS 118, 105
+          PS 119, 105
         </p>
 
         {/* Scroll indicator */}
