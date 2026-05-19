@@ -194,6 +194,63 @@ const ChurchHomePage = ({ navLinks }) => {
             <p style={{ textAlign: 'center', color: '#a07840', fontSize: '0.85rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '2rem' }}>
               Annonces paroissiales
             </p>
+
+            {/* Souper spaghetti */}
+            <div style={{
+              border: '1px solid rgba(160,120,64,0.15)',
+              borderRadius: '4px',
+              padding: '2.5rem',
+              background: '#fff',
+              boxShadow: '0 4px 20px rgba(80,40,10,0.04)',
+            }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#3a2010', marginBottom: '0.5rem', lineHeight: 1.4, textAlign: 'center' }}>
+                Souper spaghetti &amp; Soirée de jeux
+              </h3>
+              <p style={{ color: '#6b4020', fontSize: '0.9rem', marginBottom: '1.8rem', fontStyle: 'italic', textAlign: 'center', lineHeight: 1.6 }}>
+                Le Comité social et le Club de l'âge d'or de St-François-de-Sales<br />vous invitent à une soirée bien spéciale !
+              </p>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.7rem', marginBottom: '1.8rem', fontSize: '1rem', color: '#4a3520', alignItems: 'center' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <strong style={{ color: '#a07030' }}>Quand :</strong>
+                  <span>Samedi 30 mai 2026 — portes ouvertes à 17 h</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <strong style={{ color: '#a07030' }}>Où :</strong>
+                  <span>Local du Club de l'âge d'or · 7100, boul. des Mille-Îles, Laval</span>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '1.8rem', flexWrap: 'wrap' }}>
+                <div style={{ background: 'rgba(200,160,74,0.08)', border: '1px solid rgba(200,160,74,0.3)', borderRadius: '4px', padding: '0.9rem 1.4rem', textAlign: 'center', minWidth: '120px' }}>
+                  <p style={{ fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: '#a07840', marginBottom: '0.3rem' }}>Adultes</p>
+                  <p style={{ fontSize: '1.8rem', fontWeight: 700, color: '#3a2010', margin: 0 }}>25 $</p>
+                </div>
+                <div style={{ background: 'rgba(200,160,74,0.08)', border: '1px solid rgba(200,160,74,0.3)', borderRadius: '4px', padding: '0.9rem 1.4rem', textAlign: 'center', minWidth: '120px' }}>
+                  <p style={{ fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: '#a07840', marginBottom: '0.3rem' }}>10 – 15 ans</p>
+                  <p style={{ fontSize: '1.8rem', fontWeight: 700, color: '#3a2010', margin: 0 }}>15 $</p>
+                </div>
+              </div>
+
+              <div style={{ background: 'rgba(200,160,74,0.06)', padding: '1.1rem 1.4rem', borderRadius: '4px', borderLeft: '4px solid #c8a04a', fontSize: '0.9rem', lineHeight: 1.8, color: '#5a3d24', marginBottom: '1rem' }}>
+                <strong style={{ color: '#3a2010' }}>Au menu : </strong>
+                Salade César, spaghetti, dessert, café ou thé · Apportez votre vin
+                <br />
+                <span>Bière disponible : 3 $ l'unité ou 2 pour 5 $</span>
+              </div>
+
+              <div style={{ background: 'rgba(200,160,74,0.06)', padding: '1.1rem 1.4rem', borderRadius: '4px', borderLeft: '4px solid #c8a04a', fontSize: '0.9rem', lineHeight: 1.8, color: '#5a3d24', marginBottom: '1.5rem' }}>
+                <strong style={{ color: '#3a2010' }}>Réservations : </strong>
+                Michèle Urbain · <a href="tel:5147109650" style={{ color: '#a07030', textDecoration: 'none' }}>514 710-9650</a>
+                {' '}· Diane Imbeault · <a href="tel:4506663563" style={{ color: '#a07030', textDecoration: 'none' }}>450 666-3563</a>
+              </div>
+
+              <p style={{ color: '#a07840', fontSize: '1rem', fontWeight: 600, textAlign: 'center', fontStyle: 'italic' }}>
+                Apportez votre sourire et, si vous le souhaitez, votre jeu de société préféré !<br />
+                Prix de présence · Nous vous attendons en grand nombre !
+              </p>
+            </div>
+
           </div>
         </section>
 
@@ -350,166 +407,6 @@ const ChurchHomePage = ({ navLinks }) => {
           >
             Consulter le semainier
           </a>
-        </section>
-
-        {/* Informations paroissiales */}
-        <section
-          ref={reg('paroissial')}
-          {...fadeIn('paroissial', 0.1)}
-          style={{ marginBottom: '5rem' }}
-        >
-          {/* <p style={{ fontSize: '0.75rem', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#a07840', marginBottom: '1rem', textAlign: 'center' }}>
-            Vie paroissiale
-          </p> */}
-          <h2 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontWeight: 700, color: '#2c1a08', marginBottom: '1.5rem', lineHeight: 1.3, textAlign: 'center' }}>
-            Informations paroissiales
-          </h2>
-          <div style={{ width: '48px', height: '2px', background: '#c8a04a', margin: '0 auto 3rem' }} />
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-
-            {/* Campagne Dîme Annuelle 2026 */}
-            <div style={{
-              border: '1px solid rgba(160,120,64,0.2)',
-              borderRadius: '2px',
-              padding: '2.5rem',
-              background: '#fff',
-              boxShadow: '0 2px 24px rgba(80,40,10,0.06)',
-            }}>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#3a2010', marginBottom: '0.8rem', lineHeight: 1.4, textAlign: 'center' }}>
-                Campagne Dîme Annuelle 2026
-              </h3>
-              <p style={{ color: '#6b4020', fontSize: '0.95rem', marginBottom: '1.5rem', fontStyle: 'italic', textAlign: 'center' }}>
-                Plus de 300 ans d'histoire et de patrimoine à préserver !
-              </p>
-              <p style={{ fontSize: '0.95rem', color: '#4a3520', lineHeight: 1.8, marginBottom: '1.5rem' }}>
-                Les sources de revenus les plus importantes de notre paroisse sont <strong>la dîme</strong> et les <strong>quêtes dominicales</strong>.
-                Ensemble, nous soutenons nos infrastructures : église, presbytère et cimetière.
-                Votre don, quel que soit son montant, aura un impact significatif sur notre communauté.
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '1.8rem', flexWrap: 'wrap' }}>
-                <div style={{ background: 'rgba(200,160,74,0.08)', border: '1px solid rgba(200,160,74,0.3)', borderRadius: '4px', padding: '1rem 1.5rem', textAlign: 'center', minWidth: '130px' }}>
-                  <p style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: '#a07840', marginBottom: '0.3rem' }}>Montant suggéré</p>
-                  <p style={{ fontSize: '1.8rem', fontWeight: 700, color: '#3a2010', margin: 0 }}>75 $</p>
-                  <p style={{ fontSize: '0.8rem', color: '#6b4c2a', margin: 0 }}>par personne</p>
-                </div>
-                <div style={{ background: 'rgba(200,160,74,0.08)', border: '1px solid rgba(200,160,74,0.3)', borderRadius: '4px', padding: '1rem 1.5rem', textAlign: 'center', minWidth: '130px' }}>
-                  <p style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: '#a07840', marginBottom: '0.3rem' }}>Reçu d'impôt</p>
-                  <p style={{ fontSize: '1.8rem', fontWeight: 700, color: '#3a2010', margin: 0 }}>20 $+</p>
-                  <p style={{ fontSize: '0.8rem', color: '#6b4c2a', margin: 0 }}>et plus</p>
-                </div>
-              </div>
-              <div style={{ background: 'rgba(200,160,74,0.06)', padding: '1.2rem 1.4rem', borderRadius: '4px', borderLeft: '4px solid #c8a04a', fontSize: '0.9rem', lineHeight: 1.9, color: '#5a3d24' }}>
-                <strong style={{ display: 'block', marginBottom: '0.6rem', color: '#3a2010' }}>Modes de paiement :</strong>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
-                  <span>✓ Argent comptant ou enveloppes — au presbytère</span>
-                  <span>✓ Chèque par la poste — 7070, boul. des Mille-Îles, Laval H7A 4B3</span>
-                  <span>✓ Virement Interac —{' '}
-                    <a href="mailto:stfrancoisdesales@videotron.ca" style={{ color: '#a07030', textDecoration: 'none' }}>stfrancoisdesales@videotron.ca</a>
-                    {' '}(raison : dîmes et votre nom)
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Location de la salle paroissiale */}
-            <div style={{
-              border: '1px solid rgba(160,120,64,0.2)',
-              borderRadius: '2px',
-              padding: '2.5rem',
-              background: '#fff',
-              boxShadow: '0 2px 24px rgba(80,40,10,0.06)',
-            }}>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#3a2010', marginBottom: '0.8rem', lineHeight: 1.4, textAlign: 'center' }}>
-                Location de la salle paroissiale
-              </h3>
-              <p style={{ color: '#6b4020', fontSize: '0.95rem', marginBottom: '1.5rem', fontStyle: 'italic', textAlign: 'center' }}>
-                Mariages · Baptêmes · Funérailles · Réunions familiales · Fêtes de bureau
-              </p>
-              <p style={{ fontSize: '0.95rem', color: '#4a3520', lineHeight: 1.8, marginBottom: '1.5rem', textAlign: 'center' }}>
-                Notre paroisse dispose d'une salle de réception bien équipée pouvant accueillir <strong>jusqu'à 85 personnes</strong>,
-                située au deuxième étage (en haut des garages), juste à côté du presbytère.
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '1.8rem', flexWrap: 'wrap' }}>
-                <div style={{ background: 'rgba(200,160,74,0.08)', border: '1px solid rgba(200,160,74,0.3)', borderRadius: '4px', padding: '1rem 1.5rem', textAlign: 'center', minWidth: '130px' }}>
-                  <p style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: '#a07840', marginBottom: '0.3rem' }}>Prix de location</p>
-                  <p style={{ fontSize: '1.8rem', fontWeight: 700, color: '#3a2010', margin: 0 }}>250 $</p>
-                </div>
-                <div style={{ background: 'rgba(200,160,74,0.08)', border: '1px solid rgba(200,160,74,0.3)', borderRadius: '4px', padding: '1rem 1.5rem', textAlign: 'center', minWidth: '130px' }}>
-                  <p style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: '#a07840', marginBottom: '0.3rem' }}>Capacité</p>
-                  <p style={{ fontSize: '1.8rem', fontWeight: 700, color: '#3a2010', margin: 0 }}>85</p>
-                  <p style={{ fontSize: '0.8rem', color: '#6b4c2a', margin: 0 }}>personnes</p>
-                </div>
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                <div style={{ background: 'rgba(200,160,74,0.06)', padding: '1rem 1.4rem', borderRadius: '4px', borderLeft: '4px solid #c8a04a', fontSize: '0.9rem', lineHeight: 1.8, color: '#5a3d24' }}>
-                  <strong style={{ color: '#3a2010' }}>Équipements : </strong>
-                  Cuisinière, micro-ondes, réfrigérateur, tables, chaises, toilette, climatisation
-                </div>
-                <div style={{ background: 'rgba(200,160,74,0.06)', padding: '1rem 1.4rem', borderRadius: '4px', borderLeft: '4px solid #c8a04a', fontSize: '0.9rem', lineHeight: 1.9, color: '#5a3d24' }}>
-                  <strong style={{ display: 'block', marginBottom: '0.3rem', color: '#3a2010' }}>Pour information :</strong>
-                  Mme Diane Imbeault · 450 666-3563 ·{' '}
-                  <a href="mailto:stfrancoisdesales@videotron.ca" style={{ color: '#a07030', textDecoration: 'none' }}>stfrancoisdesales@videotron.ca</a>
-                  <br />
-                  <span style={{ fontSize: '0.85rem', color: '#7a5c3a' }}>
-                    Lun.–jeu. : 9 h 30 – 12 h 00 et 13 h 30 – 16 h 00 · Ven. : 9 h 30 – 12 h 00 (fermé en après-midi)
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Cimetière Saint-François-de-Sales */}
-            <div style={{
-              border: '1px solid rgba(160,120,64,0.2)',
-              borderRadius: '2px',
-              padding: '2.5rem',
-              background: '#fff',
-              boxShadow: '0 2px 24px rgba(80,40,10,0.06)',
-            }}>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#3a2010', marginBottom: '0.8rem', lineHeight: 1.4, textAlign: 'center' }}>
-                Cimetière Saint-François-de-Sales
-              </h3>
-              <p style={{ color: '#6b4020', fontSize: '0.95rem', marginBottom: '1.5rem', fontStyle: 'italic', textAlign: 'center' }}>
-                Fondé en 1685 · Toujours actif aujourd'hui
-              </p>
-              <p style={{ fontSize: '0.95rem', color: '#4a3520', lineHeight: 1.8, marginBottom: '1.5rem' }}>
-                Le cimetière est adjacent à l'église et administré par la Fabrique Saint-François-de-Sales.
-                Nous avons des <strong>lots disponibles pour urnes, cercueils et columbarium</strong>.
-                C'est un lieu important de souvenirs et de commémorations sur l'Île de Laval.
-              </p>
-
-              <div style={{ background: 'rgba(200,160,74,0.06)', padding: '1.2rem 1.4rem', borderRadius: '4px', borderLeft: '4px solid #c8a04a', fontSize: '0.9rem', lineHeight: 2, color: '#5a3d24', marginBottom: '1.2rem' }}>
-                <strong style={{ display: 'block', marginBottom: '0.6rem', color: '#3a2010' }}>Tarifs :</strong>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  <div><strong>1 750 $</strong> — terrain pour 2 cercueils et 6 urnes, sans monument <em>(+ 50 $/an entretien)</em></div>
-                  <div><strong>À partir de 2 800 $</strong> — terrain pour 2 cercueils et 6 urnes avec base et façade de monument <em>(+ 50 $/an entretien)</em></div>
-                  <div><strong>2 400 $</strong> — terrain pour 8 urnes avec base et façade de monument <em>(+ 50 $/an entretien)</em></div>
-                  <div><strong>1 650 $ – 1 950 $</strong> — columbarium extérieur pour 2 urnes, gravure incluse pour 35 ans</div>
-                  <div><strong>750 $</strong> — columbarium extérieur tube (par urne, gravure sur monument communautaire incluse)</div>
-                </div>
-              </div>
-
-              <div style={{ background: 'rgba(200,160,74,0.06)', padding: '1rem 1.4rem', borderRadius: '4px', borderLeft: '4px solid #c8a04a', fontSize: '0.9rem', lineHeight: 1.9, color: '#5a3d24', marginBottom: '1.2rem' }}>
-                <strong style={{ display: 'block', marginBottom: '0.4rem', color: '#3a2010' }}>Informations générales :</strong>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
-                  <span>✓ Accessible en tout temps</span>
-                  <span>✓ Mises en niche au columbarium disponibles toute l'année</span>
-                  <span>✓ Mises en terre de cercueils disponibles toute l'année</span>
-                </div>
-              </div>
-
-              <div style={{ background: 'rgba(200,160,74,0.06)', padding: '1rem 1.4rem', borderRadius: '4px', borderLeft: '4px solid #c8a04a', fontSize: '0.9rem', lineHeight: 1.9, color: '#5a3d24' }}>
-                <strong style={{ display: 'block', marginBottom: '0.3rem', color: '#3a2010' }}>Pour information :</strong>
-                Mme Diane Imbeault · 450 666-3563 ·{' '}
-                <a href="mailto:stfrancoisdesales@videotron.ca" style={{ color: '#a07030', textDecoration: 'none' }}>stfrancoisdesales@videotron.ca</a>
-                <br />
-                <span style={{ fontSize: '0.85rem', color: '#7a5c3a' }}>
-                  Lun.–jeu. : 9 h 30 – 12 h 00 et 13 h 30 – 16 h 00 · Ven. : 9 h 30 – 12 h 00 (fermé en après-midi)
-                </span>
-              </div>
-            </div>
-
-          </div>
         </section>
 
       </main>

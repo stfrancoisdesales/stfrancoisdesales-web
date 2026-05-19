@@ -4,6 +4,8 @@ import ChurchHomePage from './components/ChurchHomePage';
 import Biographie from './components/Biographie';
 import Histoire from './components/Histoire';
 import Gallery from './components/Gallery';
+import Cimetiere from './components/Cimetiere';
+import Dons from './components/Dons';
 
 const App = () => {
 
@@ -12,6 +14,8 @@ const App = () => {
     { id: 'biographie', label: 'Biographie' },
     { id: 'histoire', label: 'Histoire' },
     { id: 'galerie', label: 'Galerie' },
+    { id: 'cimetiere', label: 'Cimetière' },
+    { id: 'dons', label: 'Dons' },
   ]
 
   return (
@@ -22,6 +26,8 @@ const App = () => {
         <Route path="/biographie" element={<Biographie navLinks={navLinks} />} />
         <Route path="/histoire" element={<Histoire navLinks={navLinks} />} />
         <Route path="/galerie" element={<Gallery navLinks={navLinks} />} />
+        <Route path="/cimetiere" element={<Cimetiere navLinks={navLinks} />} />
+        <Route path="/dons" element={<Dons navLinks={navLinks} />} />
         {/* <Route path="/a-propos" element={<Apropos />} />
         <Route path="/archives" element={<Archives />} /> */}
       </Routes>
