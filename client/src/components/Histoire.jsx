@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import NavBar from './NavBar';
+import SEO from './SEO';
 import churchFront from '../../assets/church-front.jpg';
 
 const Histoire = ({ navLinks }) => {
@@ -39,7 +40,12 @@ const Histoire = ({ navLinks }) => {
 
   return (
     <div style={{ minHeight: '100vh', background: '#faf8f5', fontFamily: "'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif", color: '#2c2420', overflowX: 'hidden' }}>
-      
+      <SEO
+        title="Histoire de la Paroisse"
+        description="Retracez l'histoire de la Paroisse Saint-François-de-Sales à Laval, l'une des plus anciennes paroisses du Québec, fondée il y a plus de trois siècles sur les rives de la rivière des Mille-Îles."
+        path="/histoire"
+      />
+
       <NavBar navLinks={navLinks} scrolled={scrolled}/>
 
       {/* Hero */}

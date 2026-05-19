@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import NavBar from './NavBar';
+import SEO from './SEO';
 import churchFront from '../../assets/church-front.jpg';
 
 const ChurchHomePage = ({ navLinks }) => {
@@ -64,6 +65,10 @@ const ChurchHomePage = ({ navLinks }) => {
 
   return (
     <div style={{ minHeight: '100vh', background: '#faf8f5', fontFamily: "'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif", color: '#2c2420', overflowX: 'hidden' }}>
+      <SEO
+        description="Découvrez la Paroisse Saint-François-de-Sales à Laval, fondée il y a plus de 325 ans. Horaires des messes, coordonnées, annonces et vie communautaire au Diocèse de Montréal."
+        path="/"
+      />
 
       <NavBar navLinks={navLinks} scrolled={scrolled} />
 

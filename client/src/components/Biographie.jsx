@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import NavBar from './NavBar';
+import SEO from './SEO';
 import saintFrancoisImg from '../../assets/saint-francois-de-sales.jpeg';
 import churchFront from '../../assets/church-front.jpg';
 
@@ -49,6 +50,11 @@ const Biographie = ({ navLinks }) => {
 
   return (
     <div style={{ minHeight: '100vh', background: '#faf8f5', fontFamily: "'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif", color: '#2c2420', overflowX: 'hidden' }}>
+      <SEO
+        title="Biographie de Saint François de Sales"
+        description="Découvrez la vie et l'œuvre de saint François de Sales, Docteur de l'Église, patron de notre paroisse à Laval. Évêque, écrivain et mystique du XVIIe siècle."
+        path="/biographie"
+      />
 
       <NavBar navLinks={navLinks} scrolled={scrolled} />
 

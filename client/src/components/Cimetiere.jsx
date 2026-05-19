@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import NavBar from './NavBar';
+import SEO from './SEO';
 import churchFront from '../../assets/church-front.jpg';
 
 const Cimetiere = ({ navLinks }) => {
@@ -67,6 +68,11 @@ const Cimetiere = ({ navLinks }) => {
 
   return (
     <div style={{ minHeight: '100vh', background: '#faf8f5', fontFamily: "'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif", color: '#2c2420', overflowX: 'hidden' }}>
+      <SEO
+        title="Cimetière Paroissial"
+        description="Le cimetière de la Paroisse Saint-François-de-Sales à Laval : un lieu de recueillement et de mémoire pour notre communauté chrétienne depuis plus de trois siècles."
+        path="/cimetiere"
+      />
 
       <NavBar navLinks={navLinks} scrolled={scrolled} />
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import NavBar from './NavBar';
+import SEO from './SEO';
 import churchFront from '../../assets/church-front.jpg';
 
 import img1 from '../../assets/vie-chretienne/image1.jpeg';
@@ -68,7 +69,12 @@ const Gallery = ({ navLinks }) => {
 
   return (
     <div style={{ minHeight: '100vh', background: '#faf8f5', fontFamily: "'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif", color: '#2c2420', overflowX: 'hidden' }}>
-      
+      <SEO
+        title="Galerie de photos"
+        description="Découvrez la Paroisse Saint-François-de-Sales à Laval en images : photos de notre église, de nos célébrations et de notre communauté chrétienne."
+        path="/galerie"
+      />
+
       <NavBar navLinks={navLinks} scrolled={scrolled}/>
 
       {/* Hero */}

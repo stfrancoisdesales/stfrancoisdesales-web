@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import NavBar from './NavBar';
+import SEO from './SEO';
 import churchFront from '../../assets/church-front.jpg';
 
 const Dons = ({ navLinks }) => {
@@ -39,6 +40,11 @@ const Dons = ({ navLinks }) => {
 
   return (
     <div style={{ minHeight: '100vh', background: '#faf8f5', fontFamily: "'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif", color: '#2c2420', overflowX: 'hidden' }}>
+      <SEO
+        title="Faire un don"
+        description="Soutenez la mission de la Paroisse Saint-François-de-Sales à Laval par vos dons. Contribuez à la vie de notre communauté chrétienne du Diocèse de Montréal."
+        path="/dons"
+      />
 
       <NavBar navLinks={navLinks} scrolled={scrolled} />
 
