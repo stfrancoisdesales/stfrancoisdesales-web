@@ -288,7 +288,7 @@ const Dons = ({ navLinks }) => {
               « Merci de continuer à soutenir votre paroisse avec toute la générosité et l'attachement que vous démontrez envers votre communauté chrétienne. »
             </p>
             <p style={{ color: 'rgba(212,168,80,0.7)', fontSize: '0.85rem', letterSpacing: '0.12em' }}>
-              — Abbé Bernard Kanayoge, prêtre administrateur, et les marguilliers
+              — Abbé Alain Major, prêtre administrateur, et les marguilliers
             </p>
           </div>
         </section>

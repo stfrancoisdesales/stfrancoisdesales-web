@@ -200,7 +200,7 @@ const ChurchHomePage = ({ navLinks }) => {
               Annonces paroissiales
             </p>
 
-            {/* Souper spaghetti */}
+            {/* Avis - horaire estival */}
             <div style={{
               border: '1px solid rgba(160,120,64,0.15)',
               borderRadius: '4px',
@@ -208,51 +208,17 @@ const ChurchHomePage = ({ navLinks }) => {
               background: '#fff',
               boxShadow: '0 4px 20px rgba(80,40,10,0.04)',
             }}>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#3a2010', marginBottom: '0.5rem', lineHeight: 1.4, textAlign: 'center' }}>
-                Souper spaghetti &amp; Soirée de jeux
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#3a2010', marginBottom: '1.5rem', lineHeight: 1.4, textAlign: 'center' }}>
+                Veuillez prendre note
               </h3>
-              <p style={{ color: '#6b4020', fontSize: '0.9rem', marginBottom: '1.8rem', fontStyle: 'italic', textAlign: 'center', lineHeight: 1.6 }}>
-                Le Comité social et le Club de l'âge d'or de St-François-de-Sales<br />vous invitent à une soirée bien spéciale !
-              </p>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.7rem', marginBottom: '1.8rem', fontSize: '1rem', color: '#4a3520', alignItems: 'center' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <strong style={{ color: '#a07030' }}>Quand :</strong>
-                  <span>Samedi 30 mai 2026 — portes ouvertes à 17 h</span>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <strong style={{ color: '#a07030' }}>Où :</strong>
-                  <span>Local du Club de l'âge d'or · 7100, boul. des Mille-Îles, Laval</span>
-                </div>
-              </div>
-
-              <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '1.8rem', flexWrap: 'wrap' }}>
-                <div style={{ background: 'rgba(200,160,74,0.08)', border: '1px solid rgba(200,160,74,0.3)', borderRadius: '4px', padding: '0.9rem 1.4rem', textAlign: 'center', minWidth: '120px' }}>
-                  <p style={{ fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: '#a07840', marginBottom: '0.3rem' }}>Adultes</p>
-                  <p style={{ fontSize: '1.8rem', fontWeight: 700, color: '#3a2010', margin: 0 }}>25 $</p>
-                </div>
-                <div style={{ background: 'rgba(200,160,74,0.08)', border: '1px solid rgba(200,160,74,0.3)', borderRadius: '4px', padding: '0.9rem 1.4rem', textAlign: 'center', minWidth: '120px' }}>
-                  <p style={{ fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: '#a07840', marginBottom: '0.3rem' }}>10 – 15 ans</p>
-                  <p style={{ fontSize: '1.8rem', fontWeight: 700, color: '#3a2010', margin: 0 }}>15 $</p>
-                </div>
-              </div>
 
               <div style={{ background: 'rgba(200,160,74,0.06)', padding: '1.1rem 1.4rem', borderRadius: '4px', borderLeft: '4px solid #c8a04a', fontSize: '0.9rem', lineHeight: 1.8, color: '#5a3d24', marginBottom: '1rem' }}>
-                <strong style={{ color: '#3a2010' }}>Au menu : </strong>
-                Salade César, spaghetti, dessert, café ou thé · Apportez votre vin
-                <br />
-                <span>Bière disponible : 3 $ l'unité ou 2 pour 5 $</span>
+                <strong style={{ color: '#3a2010' }}>Durant la période estivale : </strong>
+                tout le mois de juillet, jusqu'à la mi-août
               </div>
 
-              <div style={{ background: 'rgba(200,160,74,0.06)', padding: '1.1rem 1.4rem', borderRadius: '4px', borderLeft: '4px solid #c8a04a', fontSize: '0.9rem', lineHeight: 1.8, color: '#5a3d24', marginBottom: '1.5rem' }}>
-                <strong style={{ color: '#3a2010' }}>Réservations : </strong>
-                Michèle Urbain · <a href="tel:5147109650" style={{ color: '#a07030', textDecoration: 'none' }}>514 710-9650</a>
-                {' '}· Diane Imbeault · <a href="tel:4506663563" style={{ color: '#a07030', textDecoration: 'none' }}>450 666-3563</a>
-              </div>
-
-              <p style={{ color: '#a07840', fontSize: '1rem', fontWeight: 600, textAlign: 'center', fontStyle: 'italic' }}>
-                Apportez votre sourire et, si vous le souhaitez, votre jeu de société préféré !<br />
-                Prix de présence · Nous vous attendons en grand nombre !
+              <p style={{ color: '#4a3520', fontSize: '1rem', textAlign: 'center', lineHeight: 1.8 }}>
+                Il n'y a pas de messe à 9 h 00 du mardi au vendredi.
               </p>
             </div>
 
@@ -342,7 +308,7 @@ const ChurchHomePage = ({ navLinks }) => {
               borderRadius: '2px', padding: '1rem 1.25rem', marginBottom: '1.5rem',
               fontSize: '0.88rem', color: '#6b4c2a', lineHeight: 1.8,
             }}>
-              <strong>Abbé Bernard Kanayoge</strong>, prêtre administrateur<br />
+              <strong>Abbé Alain Major</strong>, prêtre administrateur<br />
               <strong>Mme Diane Imbeault</strong>, secrétaire
             </div>
 
