@@ -38,34 +38,6 @@ const Cimetiere = ({ navLinks }) => {
     },
   });
 
-  const tarifs = [
-    {
-      prix: '1 750 $',
-      description: 'Terrain pour 2 cercueils et 6 urnes, sans monument',
-      note: '+ 50 $/an frais d\'entretien',
-    },
-    {
-      prix: 'À partir de 2 800 $',
-      description: 'Terrain pour 2 cercueils et 6 urnes avec base et façade de monument',
-      note: 'Gravure du monument à vos frais · + 50 $/an frais d\'entretien',
-    },
-    {
-      prix: '2 400 $',
-      description: 'Terrain pour 8 urnes avec base et façade de monument',
-      note: 'Gravure du monument à vos frais · + 50 $/an frais d\'entretien',
-    },
-    {
-      prix: '1 650 $ – 1 950 $',
-      description: 'Columbarium extérieur pour 2 urnes',
-      note: 'Gravure incluse pour 35 ans',
-    },
-    {
-      prix: '750 $',
-      description: 'Columbarium extérieur tube — par urne',
-      note: 'Gravure sur le monument communautaire incluse',
-    },
-  ];
-
   return (
     <div style={{ minHeight: '100vh', background: '#faf8f5', fontFamily: "'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif", color: '#2c2420', overflowX: 'hidden' }}>
       <SEO
@@ -134,50 +106,6 @@ const Cimetiere = ({ navLinks }) => {
             Adjacent à l'église et administré par la <em style={{ color: '#6b4020' }}>Fabrique Saint-François-de-Sales</em>,
             notre cimetière est un lieu important de souvenirs et de commémorations sur l'Île de Laval.
           </p>
-        </section>
-
-        {/* Lots disponibles */}
-        <section
-          ref={reg('lots')}
-          {...fadeIn('lots', 0.1)}
-          style={{ marginBottom: '5rem' }}
-        >
-          <p style={{ fontSize: '0.75rem', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#a07840', marginBottom: '1rem', textAlign: 'center' }}>
-            Inhumation
-          </p>
-          <h2 style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)', fontWeight: 700, color: '#2c1a08', marginBottom: '0.5rem', lineHeight: 1.3, textAlign: 'center' }}>
-            Lots disponibles
-          </h2>
-          <p style={{ textAlign: 'center', color: '#6b4020', fontStyle: 'italic', marginBottom: '2.5rem', fontSize: '0.95rem' }}>
-            Urnes · Cercueils · Columbarium
-          </p>
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            {tarifs.map(({ prix, description, note }, i) => (
-              <div key={i} style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr auto',
-                alignItems: 'center',
-                gap: '1rem',
-                background: '#fff',
-                border: '1px solid rgba(160,120,64,0.18)',
-                borderRadius: '2px',
-                padding: '1.25rem 1.5rem',
-                boxShadow: '0 2px 12px rgba(80,40,10,0.04)',
-              }}>
-                <div>
-                  <p style={{ fontSize: '1rem', fontWeight: 600, color: '#2c1a08', margin: '0 0 0.25rem' }}>{description}</p>
-                  <p style={{ fontSize: '0.82rem', color: '#a07840', margin: 0, fontStyle: 'italic' }}>{note}</p>
-                </div>
-                <div style={{
-                  background: 'rgba(200,160,74,0.1)', border: '1px solid rgba(200,160,74,0.35)',
-                  borderRadius: '4px', padding: '0.5rem 1rem', textAlign: 'center', whiteSpace: 'nowrap',
-                }}>
-                  <span style={{ fontSize: '1rem', fontWeight: 700, color: '#3a2010' }}>{prix}</span>
-                </div>
-              </div>
-            ))}
-          </div>
         </section>
 
         {/* Informations générales */}
